@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import store from "./app/store";
 import App from "./app/App.js";
 
-export default class YouGoCityApp extends Component {
+export default class ReactNativeReduxNavigation extends Component {
   constructor(props) {
     super(props);
   }
@@ -19,4 +19,4 @@ export default class YouGoCityApp extends Component {
   }
 }
 
-AppRegistry.registerComponent("YouGoCityApp", () => YouGoCityApp);
+AppRegistry.registerComponent("ReactNativeReduxNavigation", () => ReactNativeReduxNavigation);

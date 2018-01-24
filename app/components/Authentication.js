@@ -8,14 +8,14 @@ import { normalizeSize } from "./../utils";
 
 class Authentication extends Component {
   render() {
-    let { isLoggedIn, logout, loginScreen } = this.props;
+    let { isLoggedIn, dispatchLogout, dispatchGoToLoginScreen } = this.props;
     return (
       <SocialIcon
         raised
         button
         light
         fontStyle={styles.buttonFont}
-        onPress={isLoggedIn ? logout : loginScreen}
+        onPress={isLoggedIn ? dispatchLogout : dispatchGoToLoginScreen}
         title={isLoggedIn ? "Log Out" : "Open Login Screen"}
       />
     );
@@ -33,8 +33,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch({ type: "LOGOUT" }),
-  loginScreen: () =>
+  dispatchLogout: () => dispatch({ type: "LOGOUT" }),
+  dispatchGoToLoginScreen: () =>
     dispatch(NavigationActions.navigate({ routeName: "Login" }))
 });
 
