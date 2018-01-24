@@ -24,8 +24,8 @@ class Authentication extends Component {
 
 Authentication.propTypes = {
   isLoggedIn: PropTypes.bool.isRequired,
-  logout: PropTypes.func.isRequired,
-  loginScreen: PropTypes.func.isRequired
+  dispatchLogout: PropTypes.func.isRequired,
+  dispatchGoToLoginScreen: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
